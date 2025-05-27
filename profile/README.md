@@ -67,7 +67,7 @@
 </details>
 
 <details>
-<summary><b>2. 실시간 로그 분석 및 인사이트/b></summary>
+<summary><b>2. 실시간 로그 분석 및 인사이트</b></summary>
 </br>
 
 - **통합 로그 분석**
