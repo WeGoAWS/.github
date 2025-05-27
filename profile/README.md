@@ -1,75 +1,44 @@
-## AWS Cloud Agent: MCP-Based Cloud Native Agent for B2B IaC
-
+## AWS Cloud Agent: MCP-Based Cloud Native Agent for B2B IaC
 </br>
-
 ## Why?
 저희 WGA(WeGoAWS) 팀은 클라우드를 관리할 때, 어떤 기능이 있으면 좋을지 생각했습니다. 실제 현업자분들께 자문을 구한 결과, **챗봇을 통해 자연어 질의만으로 클라우드 운영 정보에 쉽게 접근할 수 있으면 좋겠다고 판단했습니다**. 서비스를 개발할 때, 다음과 같은 부분에 초점을 두었습니다.
-
 </br>
-
 <details> 
 <summary><b>1. 복잡한 AWS 콘솔 탐색의 어려움</b></summary>
-
 </br>
-
 - 수많은 서비스와 메뉴 속에서 원하는 정보를 찾기 위해 여러 화면을 오가는 비효율성
 - 각 서비스별로 다른 인터페이스로 인한 학습 비용 증가
-
 </br>
-
 </details>
-
 <details> 
 <summary><b>2. 로그 분석의 복잡성</b></summary>
-
 </br>
-
 - CloudTrail, GuardDuty 등 여러 서비스에 분산된 로그 데이터
 - SQL 쿼리 작성 없이는 접근하기 어려운 Athena 기반 분석
-
 </br>
-
 </details>
-
 <details> 
 <summary><b>3. 실시간 모니터링과 대응의 어려움</b></summary>
-
 </br>
-
 - 분산된 CloudWatch 대시보드와 알람 확인의 복잡성
 - 비용 분석과 최적화를 위한 데이터 수집의 번거로움
-
 </br>
-
 </details>
-
 <details> 
 <summary><b>4. 문서 검색과 학습의 비효율성</b></summary>
-
 </br>
-
 - 방대한 AWS 공식 문서에서 필요한 정보를 찾기 어려움
 - 한국어로 번역된 최신 정보의 부족
-
 </br>
-
 </details>
-
 </br>
-
 서비스를 개발할 때, **자연어 질의를 통한 직관적 접근**, **실시간 데이터 분석**, **시각화를 통한 이해도 향상**에 초점을 두었습니다.
-
 </br>
-
 ## 핵심 기능
-
 </br>
-
 저희 서비스는 다음과 같은 핵심 기능을 제공합니다.
-
 </br>
-
-### 1. 지능형 자연어 질의 시스템
+### 🤖 1. 지능형 자연어 질의 시스템
 <details>
 <summary><b>MCP(Model Context Protocol) 기반 AI 에이전트</b></summary>
 </br>
@@ -86,7 +55,7 @@
 </br>
 </details>
 
-### 2. 실시간 로그 분석 및 인사이트
+### 📊 2. 실시간 로그 분석 및 인사이트
 <details>
 <summary><b>CloudWatch Logs Insights 통합 분석</b></summary>
 </br>
@@ -104,7 +73,7 @@
 </br>
 </details>
 
-### 3. 비용 최적화 분석
+### 💰 3. 비용 최적화 분석
 <details>
 <summary><b>AWS Cost Explorer API 연동</b></summary>
 </br>
@@ -121,7 +90,7 @@
 </br>
 </details>
 
-### 4. AWS 공식 문서 검색 및 추천
+### 🔍 4. AWS 공식 문서 검색 및 추천
 <details>
 <summary><b>실시간 문서 검색 시스템</b></summary>
 </br>
@@ -138,7 +107,7 @@
 </br>
 </details>
 
-### 5. 동적 시각화 및 다이어그램 생성
+### 📈 5. 동적 시각화 및 다이어그램 생성
 <details>
 <summary><b>인터랙티브 차트 & 아키텍처 다이어그램</b></summary>
 </br>
@@ -156,7 +125,7 @@
 </br>
 </details>
 
-### 6. Slack 통합 챗봇
+### 💬 6. Slack 통합 챗봇
 <details>
 <summary><b>Slack 워크스페이스 완전 연동</b></summary>
 </br>
@@ -217,7 +186,6 @@
 </br>
 
 ## 구성원
-
 | 이름 | 학과 | 이메일 | 역할 |
 | --- | --- | --- | --- |
 | 이민서 | 사이버보안학과 | mmmm@ajou.ac.kr | 팀장, Frontend |
