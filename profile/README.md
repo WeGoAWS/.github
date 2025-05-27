@@ -1,5 +1,7 @@
 # 🤖 WGA: Cloud Native MCP AIOps
-> AWS 기반 멀티모달 클라우드 운영 자동화를 위한 서버리스 에이전트 플랫폼
+> AWS 기반 클라우드 운영 자동화를 위한 서버리스 에이전트 플랫폼
+
+![image](https://github.com/user-attachments/assets/66731b3c-754c-4cf2-9c31-cfd0371767c1)
 
 ---
 
@@ -8,7 +10,7 @@
 WGA(WeGoAWS)는 클라우드 운영의 복잡성과 인력 부족 문제를 해결하기 위해 개발된  
 **Cloud Native 기반의 지능형 AIOps Agent 시스템**입니다.
 
-LLM(Language Model)과 MCP(Modular Command Platform)를 결합하여  
+LLM(Large Language Model)과 MCP(Model Context Protocol)를 결합하여  
 Slack 및 Web UI에서 실시간 로그 분석, 비용 최적화, 문서 검색, 다이어그램 시각화까지 지원하며  
 **운영 자동화 및 의사결정 보조 시스템**으로 활용할 수 있습니다.
 
@@ -20,7 +22,7 @@ Slack 및 Web UI에서 실시간 로그 분석, 비용 최적화, 문서 검색,
 
 ### ✅ Cloud 환경의 문제점
 <details><summary><b>1. Cloud 수요 증가와 통합 관리의 한계</b></summary>
-- 클라우드 도입률 증가 → 2024년 92.2%
+- 클라우드 도입률 증가
 - MSA 기반 파편화된 시스템 구조
 - 통합 관리 어려움 & 전문 인력 부족
 </details>
@@ -117,16 +119,8 @@ Slack 및 Web UI에서 실시간 로그 분석, 비용 최적화, 문서 검색,
 
 ---
 
-## 🚀 Deployment
-
-```bash
-# 환경 설정
-export ENV=prod
-export REGION=ap-northeast-2
-
-# 배포 스크립트 실행
-sh deploy.sh
-```
+## ⚙ CI/CD
+![image](https://github.com/user-attachments/assets/2cabbaa7-b921-4330-9a5a-ccaa33ec56da)
 
 ---
 
