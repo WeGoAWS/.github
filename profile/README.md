@@ -22,18 +22,21 @@ Slack 및 Web UI에서 실시간 로그 분석, 비용 최적화, 문서 검색,
 
 ### ✅ Cloud 환경의 문제점
 <details><summary><b>1. Cloud 수요 증가와 통합 관리의 한계</b></summary>
+  
 - 클라우드 도입률 증가
 - MSA 기반 파편화된 시스템 구조
 - 통합 관리 어려움 & 전문 인력 부족
 </details>
 
 <details><summary><b>2. 복잡한 콘솔 & 로그 환경</b></summary>
+  
 - 다양한 서비스 콘솔 탐색과 학습 비용 부담
 - CloudTrail, GuardDuty 등 로그의 분산
 - Athena 쿼리 기반 분석의 진입 장벽
 </details>
 
 <details><summary><b>3. 실시간 대응과 문서 검색의 비효율</b></summary>
+  
 - CloudWatch 대시보드 분산
 - 문서 검색 시 다국어 처리, 최신성 부족
 </details>
