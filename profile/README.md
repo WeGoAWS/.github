@@ -1,234 +1,134 @@
-## 🤖 WGA: Cloud Native MCP AIOps
-</br>
+# 🤖 WGA: Cloud Native MCP AIOps
+> AWS 기반 멀티모달 클라우드 운영 자동화를 위한 서버리스 에이전트 플랫폼
 
-## 🤔Why?
+---
 
-</br>
+## 🔍 Overview
 
-저희 WGA(WeGoAWS) 팀은 실제 클라우드 운영 환경에서 실무자나 관리 기업들이 어떤 어려움을 가지고 있는 지 확인하고 싶었습니다. 기업에서 근무하고 계시는 여러 현업자분들께 자문을 구하여 현업에서 발생하는 **클라우드 운영의 어려움** 을 확인하고 이를 다음과 같이 정리하였습니다.
+WGA(WeGoAWS)는 클라우드 운영의 복잡성과 인력 부족 문제를 해결하기 위해 개발된  
+**Cloud Native 기반의 지능형 AIOps Agent 시스템**입니다.
 
-</br>
+LLM(Language Model)과 MCP(Modular Command Platform)를 결합하여  
+Slack 및 Web UI에서 실시간 로그 분석, 비용 최적화, 문서 검색, 다이어그램 시각화까지 지원하며  
+**운영 자동화 및 의사결정 보조 시스템**으로 활용할 수 있습니다.
 
-<details> 
-<summary><b>0. Cloud 수요 증가</b></summary>
-</br>
+---
 
+## 🤔 Why?
 
-- Cloud 전환 및 Cloud Native 수요가 증가하는 추세
-- 자원 및 비용의 통합관리가 Cloud 도입이 가지는 큰 숙제
-- 이를 주도할 전문 인력 부족
+> “AWS의 복잡성을 줄이고, 운영 자동화를 위한 직관적인 인터페이스가 필요하다.”
 
-</br>
+### ✅ Cloud 환경의 문제점
+<details><summary><b>1. Cloud 수요 증가와 통합 관리의 한계</b></summary>
+- 클라우드 도입률 증가 → 2024년 92.2%
+- MSA 기반 파편화된 시스템 구조
+- 통합 관리 어려움 & 전문 인력 부족
 </details>
 
-<details> 
-<summary><b>1. 복잡한 AWS 콘솔 탐색의 어려움</b></summary>
-</br>
-
-
-- **MSA(Micro-Service-Architecture)** 는 유기적이고 파편화되어 통합관리가 어려움
-- 각 서비스별로 다른 인터페이스로 인한 학습 비용 증가
-
-</br>
+<details><summary><b>2. 복잡한 콘솔 & 로그 환경</b></summary>
+- 다양한 서비스 콘솔 탐색과 학습 비용 부담
+- CloudTrail, GuardDuty 등 로그의 분산
+- Athena 쿼리 기반 분석의 진입 장벽
 </details>
 
-<details> 
-<summary><b>2. 분산된 로그와 운영의 복잡성</b></summary>
-</br>
-  
-- CloudTrail, GuardDuty 등 각 서비스에 **로그 데이터 분산**
-- SQL 쿼리 작성 없이는 접근하기 어려운 Athena 기반 분석
-- 많은 운영 작업이 수동적이고 반복적으로 이루어져 **비효율적, 인적 오류 가능성 높음**
-  
-</br>
+<details><summary><b>3. 실시간 대응과 문서 검색의 비효율</b></summary>
+- CloudWatch 대시보드 분산
+- 문서 검색 시 다국어 처리, 최신성 부족
 </details>
 
-<details> 
-<summary><b>3. 실시간 모니터링과 대응의 어려움</b></summary>
-</br>
-  
-- 분산된 CloudWatch 대시보드와 알람 확인의 복잡성
-- 비용 분석과 최적화를 위한 데이터 수집의 번거로움
-  
-</br>
+---
+
+## 🛠️ Features
+
+### ✅ 주요 기능 개요
+<details><summary><b>1. MCP 기반 자연어 질의</b></summary>
+
+- Claude 3.7 Sonnet 등 다양한 모델 연동
+- 문맥 기반 멀티턴 대화 및 세션 관리
+- LLM ↔ MCP ↔ 로그 분석 도구 자동 연동
+
 </details>
 
-<details> 
-<summary><b>4. 문서 검색과 학습의 비효율성</b></summary>
-</br>
-  
-- 방대한 AWS 공식 문서에서 필요한 정보를 찾기 어려움
-- 한국어로 번역된 최신 정보의 부족
-  
-</br>
+<details><summary><b>2. 실시간 로그 분석</b></summary>
+
+- CloudTrail, GuardDuty, Lambda 등 통합 로그 접근
+- 시간/사용자/IP 단위 분석, SQL 자동 생성
+- 보안 이상 징후 탐지 및 시각화 지원
+
 </details>
 
-</br>
+<details><summary><b>3. 비용 최적화 분석</b></summary>
 
-이에 저희는 **운영 복잡성 해소**, **직관적 접근**, **실시간 데이터 분석**, **시각화를 통한 이해도 향상**을 키워드로 잡아 **LLM 및 클라우드 네이티브 기반의 운영 챗봇을 통해 통합 관리를 이루고, 전문 인력의 업무를 효율화**하고자 했습니다.
+- 일별/지역별/서비스별 비용 Breakdown
+- 인스턴스 타입별 추천, 비용 급증 탐지
+- 트렌드 기반 비용 시각화
 
-</br>
-
-## 🛠️Features
-</br>
-
-저희 서비스는 다음과 같은 핵심 기능을 제공합니다.
-
-</br>
-
-<details>
-<summary><b>1. MCP 기반 지능형 자연어 질의 시스템</b></summary>
-</br>
-
-- **다중 AI 모델 지원**
-  - Anthropic Claude 3.7 Sonnet (기본)
-  - 사용자별 모델 선택 가능
-
-
-- **고급 대화 처리**
-  - **멀티턴 대화**를 통한 문맥 이해
-  - 세션 기반 대화 히스토리 관리
-  - **복잡한 클라우드 운영 질문 해석**
-
-
-
-</br>
 </details>
 
-<details>
-<summary><b>2. 실시간 로그 분석 및 인사이트</b></summary>
-</br>
+<details><summary><b>4. AWS 공식 문서 검색</b></summary>
 
-- **통합 로그 분석**
-  - CloudTrail, GuardDuty, Lambda 등 **다양한 서비스 로그 통합 분석**
-  - 자동 쿼리 생성 (에러 분석, 성능 분석, 보안 분석)
-  - 시간대별/사용자별/IP별 상세 분석
+- 공식 문서 자동 검색 및 질문 기반 추천
+- 한국어 번역 및 요약 제공 (기술 용어 보존)
+- 페이지네이션 지원
 
-</br>
 </details>
 
-<details>
-<summary><b>3. 비용 최적화 분석</b></summary>
-</br>
+<details><summary><b>5. 시각화 및 다이어그램 생성</b></summary>
 
-- **다차원 비용 분석**
-  - 일별/지역별/서비스별 상세 비용 분석
-  - **인스턴스 타입별 비용 최적화 제안**
-  - **비용 급증 알림 및 트렌드 분석**
+- 차트 15종 지원 (Line, Bar, Pie, Network 등)
+- AWS 아키텍처 다이어그램 자동 생성
+- Python Diagrams 기반, 한글 폰트 설정
 
-- **시각적 비용 리포트**
-  - 테이블 형태의 상세 비용 내역
-  - 차트를 통한 비용 트렌드 시각화
-
-</br>
 </details>
 
-<details>
-<summary><b>4. AWS 공식 문서 검색 및 추천</b></summary>
-</br>
+<details><summary><b>6. Slack 연동 챗봇</b></summary>
 
-- **지능형 문서 검색**
-  - AWS 공식 문서 API 연동
-  - **질문 맥락에 맞는 관련 문서 자동 추천**
-  - 페이지네이션을 통한 대용량 문서 처리
+- `/models` 명령어로 모델 선택
+- 대화 히스토리 기반 연속 질의
+- 사용자 인증 기반 보안 통신
 
-- **다국어 지원**
-  - 한국어 자동 번역 및 요약 제공
-  - 기술 용어 보존 및 정확한 번역
-
-</br>
 </details>
 
-<details>
-<summary><b>5. 동적 시각화 및 다이어그램 생성</b></summary>
-</br>
+<details><summary><b>7. 보안 및 인증</b></summary>
 
-- **15종류 차트 지원**
-  - Line, Bar, Pie, Scatter, Area, Column 차트
-  - Word Cloud, Radar, Histogram, Treemap
-  - Dual-axes, Mind Map, Network Graph, Flow Diagram, Fishbone
+- AWS Cognito, IAM 기반 인증/인가
+- OAuth 2.0 및 OIDC 지원
+- CORS 정책 기반 도메인 보호
 
-- **AWS 아키텍처 다이어그램**
-  - Python Diagrams 패키지 기반 자동 생성
-  - AWS, K8s, On-premise 아키텍처 지원
-  - 한글 폰트 자동 설정으로 완벽한 한국어 지원
-
-</br>
 </details>
 
-<details>
-<summary><b>6. Slack 통합 챗봇</b></summary>
-</br>
+<details><summary><b>8. 완전한 서버리스 아키텍처</b></summary>
 
-- **슬래시 명령어 지원**
-  - `/models` 명령어로 AI 모델 선택
-  - DM을 통한 대화 인터페이스 제공
-  - 대화 히스토리 기반 연속 질의
+- Lambda 기반 마이크로서비스 구성
+- CloudFormation 기반 IaC 완전 자동화
+- Amplify + CodeBuild + S3 + API Gateway 통합
 
-</br>
 </details>
 
-<details>
-<summary><b>7. 엔터프라이즈급 보안</b></summary>
-</br>
+---
 
-- **다층 보안 인증**
-  - **AWS Cognito 기반 사용자 인증**
-  - OAuth 2.0 / OpenID Connect 표준 준수
-  - Slack과 AWS 계정 연동 인증
+## 🧩 Architecture
 
-- **세밀한 권한 관리**
-  - IAM 역할 기반 API 접근 제어
-  - 리소스별 세분화된 권한 설정
-  - CORS 정책을 통한 도메인 보안
+![architecture](https://github.com/user-attachments/assets/2dea6181-5280-46ec-a144-55a413020ffd)
 
-</br>
-</details>
+- **LLM** ↔ **MCP** ↔ **운영 도구** 간 데이터 흐름
+- Slack, Web에서 동일한 백엔드 공유
+- 모든 응답은 실시간으로 MCP Tool 호출 → 결과 기반 LLM 응답 생성
 
-<details>
-<summary><b>8. Cloud Native 서버리스 아키텍처</b></summary>
-</br>
+---
 
-- **서버리스 컴퓨팅**
-  - AWS Lambda를 통한 **마이크로서비스 통합 아키텍처**
-  - API Gateway 기반 RESTful API 설계
-  - Auto Scaling과 고가용성 보장
+## 🚀 Deployment
 
-- **Infrastructure as Code**
-  - **CloudFormation을 통한 완전 자동화**
-  - 환경별(dev/test/prod) 스택 분리
-  - **원클릭 배포 및 롤백 지원**
+```bash
+# 환경 설정
+export ENV=prod
+export REGION=ap-northeast-2
 
-- **데이터 저장소**
-  - DynamoDB를 통한 NoSQL 데이터 관리
-  - S3 기반 정적 웹 호스팅
-  - Athena를 통한 데이터 레이크 분석
+# 배포 스크립트 실행
+sh deploy.sh
+```
 
-</br>
-</details>
-
-</br>
-
-## ✏️설계 및 구현
-<details> 
-<summary><b>시스템 개요</b></summary>
-</br>
-  
-![image](https://github.com/user-attachments/assets/2dea6181-5280-46ec-a144-55a413020ffd)
-
-
-</br>
-</details>
-
-<details> 
-<summary><b>CI/CD</b></summary>
-</br>
-  
-![image](https://github.com/user-attachments/assets/6b7e19cb-0c09-4570-b840-02fe452c0ef5)
-
-</br>
-</details>
-
+---
 
 ## ✌️Member
 | 이름 | 학과 | 이메일 | 역할 |
