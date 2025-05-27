@@ -1,4 +1,5 @@
-## AWS Cloud Agent: MCP-Based Cloud Native Agent for B2B IaC
+## 🤖 AWS Cloud Agent: MCP-Based Cloud Native Agent for B2B IaC
+![main](https://github.com/user-attachments/assets/d3fb10f6-57e9-4744-8dd5-f498baf96292)
 
 </br>
 
